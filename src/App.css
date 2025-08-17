@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.paddingHorizontal {
+    padding: 2rem 0;
+}
+
+.paddingVertical {
+    padding: 0 2rem;
+}
