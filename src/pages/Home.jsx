@@ -56,19 +56,19 @@ function Home() {
 
     return (
         <>
-            <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-[90vh]'>
+            <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-screen'>
                 {/* <h1 className='text-bold text-2xl text-center'>Home Page</h1> */}
 
                 <div className='mt-10 paddingVertical flex justify-center'>
                     <div className='flex flex-col border border-black p-5 w-full bg-white text-black rounded-lg'>
                         <div className='text-bold text-2xl text-center'>Currency Converter</div>
-                        <div className='mt-5 flex items-center justify-center gap-5'>
+                        <div className='mt-5 flex lg:flex-row flex-col items-center justify-center gap-5'>
 
-                            <div className='w-[30%]'>
+                            <div className='lg:w-[30%] w-full'>
                                 <label htmlFor="" className='text-bold'>Amount</label>
                                 <input value={Amount} name="Amount" onChange={handleChange} type="number" placeholder='Enter Amount' className='w-full border border-black rounded-lg p-2' />
                             </div>
-                            <div className='w-[30%]'>
+                            <div className='lg:w-[30%] w-full'>
                                 <label htmlFor="" className='text-bold'>From</label>
                                 <select value={From} name="From" onChange={handleChange} id="" className='w-full border border-black rounded-lg p-2'    >
                                     {Object.keys(Rate).map((item) => (
@@ -76,7 +76,7 @@ function Home() {
                                     ))}
                                 </select>
                             </div>
-                            <div className='w-[30%] '>
+                            <div className='lg:w-[30%] w-full'>
                                 <label htmlFor="" className='text-bold'>To</label>
                                 <select value={To} name="To" onChange={handleChange} id="" className='w-full border border-black rounded-lg p-2'>
                                     {Object.keys(Rate).map((item) => (
@@ -86,7 +86,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='mt-5 flex items-center justify-center w-full'>
-                            <div className='bg-black text-white py-2 px-5 rounded-lg w-[60%] text-bold'>Currency Amount : {ConvertedAmount}</div>
+                            <div className='bg-black text-white py-2 px-5 rounded-lg lg:w-[60%] text-bold'>Currency Amount : {ConvertedAmount}</div>
                         </div>
                     </div>
                 </div>

@@ -27,13 +27,14 @@ const About = () => {
         }
 
     }
-    return <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-[90vh]'>
+    return <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-sceen'>
         {/* <h1 className='text-bold text-2xl text-center'>BMI Calculator</h1> */}
 
         <div className='mt-10 paddingVertical flex items-center justify-center'>
             <div className='flex flex-col border border-black p-5 w-full bg-white text-black rounded-lg'>
                 <div className='text-bold text-2xl text-center'>BMI Calculator</div>
                 <form onSubmit={handleCalculate} action="">
+
                     <div className='flex flex-col pt-5 flex items-center justify-center gap-2'>
                         <div className='w-full'>
                             <label htmlFor="" className='text-bold'>Age</label>

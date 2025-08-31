@@ -2,9 +2,9 @@
 
 
 .paddingHorizontal {
-    padding: 2rem 0;
+    padding: 0 1rem;
 }
 
 .paddingVertical {
-    padding: 0 2rem;
+    padding: 1rem 0;
 }

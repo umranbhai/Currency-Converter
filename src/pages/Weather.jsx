@@ -15,7 +15,7 @@ export default function Weather() {
 
     const fetchWeather = async () => {
         try {
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=c19c7b51e02d40a88dd133219250607&q=${City}&aqi=no`);
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c19c7b51e02d40a88dd133219250607&q=${City}&aqi=no`);
             const data = await response.json();
             setWeatherData(data)
             console.log(data);
@@ -39,8 +39,8 @@ export default function Weather() {
 
     return (
         <div>
-            <section className="paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-[100vh]">
-                <div className="mt-10 paddingVertical flex items-center justify-center">
+            <section className="paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-[calc(100vh-5rem)]">
+                <div className="mt-10 paddingVertical flex items-center justify-center w-full lg:w-[50%]">
                     {
                         WeatherData && (
                             <>
@@ -49,7 +49,7 @@ export default function Weather() {
                                     <div className="mt-5 bg-black text-white text-2xl py-2 px-5 rounded-lg w-auto text-bold">{WeatherData.location.name}</div>
                                     <form className="mt-5 flex items-center justify-center w-full" onSubmit={handleSearch}>
                                         <input type="text" placeholder="Enter City" className="w-[80%] border border-black rounded-l-lg p-2 focus:outline-none" name="City" onChange={(e) => setCity(e.target.value)} />
-                                        <button className="bg-black text-white py-2 px-5 w-[20%] text-bold rounded-r-lg border border-black cursor-pointer" type="submit">Search</button>
+                                        <button className="bg-black text-white py-2 px-5 lg:w-[20%] text-bold rounded-r-lg border border-black cursor-pointer" type="submit">Search</button>
                                     </form>
 
                                     <div className="mt-5  grid grid-cols-2 gap-5 w-full">

@@ -23,10 +23,10 @@ export default function CharacterCounter() {
 
 
 
-    return <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-[90vh]'>
+    return <section className='paddingHorizontal paddingVertical flex items-start justify-center bg-black text-white h-screen'>
         {/* <h1 className='text-bold text-2xl text-center'>BMI Calculator</h1> */}
 
-        <div className='mt-10 paddingVertical flex items-center justify-center w-[500px]'>
+        <div className='mt-10 paddingVertical flex items-center justify-center lg:w-[40%] w-[80%]'>
             <div className='flex flex-col border border-black p-5 w-full bg-white text-black rounded-lg'>
                 <div className='text-bold text-2xl text-center'>Character Counter</div>
                 <div className="flex flex-col pt-5 flex items-center justify-center gap-2">
@@ -42,7 +42,12 @@ export default function CharacterCounter() {
                     </div>
                     <div className="w-full">
                         <button className="bg-black text-white py-2 px-5 rounded-lg w-full text-bold cursor-pointer" onClick={(e) => {
-
+                            e.preventDefault();
+                            setText("");
+                            setCharacterCount(0);
+                            setWordCount(0);
+                            setLineCount(0);
+                            setSentenceCount(0);
                         }}>Reset</button>
                     </div>
                 </div>
